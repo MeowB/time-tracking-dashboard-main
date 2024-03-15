@@ -58,6 +58,7 @@ body header .buttons button {
 body .card {
   background-color: #1c1f4a;
   width: 90%;
+  max-width: 325px;
   margin: auto;
   list-style: none;
   position: relative;
@@ -66,47 +67,51 @@ body .card {
   margin-top: 50px;
 }
 body .card .left, body .card .right {
-  border-radius: 15px;
   position: relative;
-  z-index: 5;
+  background-color: #1c1f4a;
+}
+body .card .left {
+  border-radius: 15px 15px 0 0;
+}
+body .card .right {
+  border-radius: 0 0 15px 15px;
 }
 body .card .background {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  border-radius: 15px 15px 0 0;
-  display: flex;
-  justify-content: end;
-  height: 30px;
-  z-index: 0;
-}
-body .card .background img {
-  position: absolute;
-  top: -10px;
-  margin-right: 15px;
-  width: 50px;
+  border-radius: 15px;
   height: fit-content;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: 90% -10px;
+}
+body .card .background span {
+  display: block;
+  height: 40px;
+  width: 100%;
 }
 body .card #background-work {
   background-color: #ff8c66;
+  background-image: url(../images/icon-work.svg);
 }
 body .card #background-play {
   background-color: #56c2e6;
+  background-image: url(../images/icon-play.svg);
 }
 body .card #background-study {
   background-color: #ff5c7c;
+  background-image: url(../images/icon-study.svg);
 }
 body .card #background-exercise {
   background-color: #4acf81;
-}
-body .card #background-exercise img {
-  top: 0;
+  background-image: url(../images/icon-exercise.svg);
+  background-position: 90% 0;
 }
 body #background-social {
   background-color: #7536d3;
+  background-image: url(../images/icon-social.svg);
 }
 body #background-self-care {
   background-color: #f1c65b;
+  background-image: url(../images/icon-self-care.svg);
 }
 
 /*# sourceMappingURL=style.css.map */

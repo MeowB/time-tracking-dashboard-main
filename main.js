@@ -20,15 +20,17 @@ async function setValues(timeframe) {
 			const formatedTitle = element.title.toLowerCase().replace(/\s+/g, '-')
 			const divStructure = `
 			<li class="card" id="${formatedTitle}">
-				<div class="background" id="background-${formatedTitle}" ><img src="./images/icon-${formatedTitle}.svg"></div>
-				<div class ="left">
-					<h2>${element.title}</h2>
-					<div>${element.timeframes[timeframe].current}</div>
-				</div>
-				
-				<div class="right">
-					<img src="./images/icon-ellipsis.svg" alt="ellipsis">
-					<div>${element.timeframes[timeframe].previous}</div>
+				<div class="background" id="background-${formatedTitle}" >
+					<span></span>
+					<div class ="left">
+						<h2>${element.title}</h2>
+						<div>${element.timeframes[timeframe].current}</div>
+					</div>
+					
+					<div class="right">
+						<img src="./images/icon-ellipsis.svg" alt="ellipsis">
+						<div>${element.timeframes[timeframe].previous}</div>
+					</div>
 				</div>
 			</li>`;
 			divUl.innerHTML += divStructure;
@@ -36,15 +38,17 @@ async function setValues(timeframe) {
 			const formatedTitle = element.title.toLowerCase().replace(/\s+/g, '-')
 			var divStructure = `
 			<li class="card" id="${formatedTitle}">
-				<div id="background-${formatedTitle}" class="background"><img src="./images/icon-${formatedTitle}.svg"></div>
-				<div class ="left">
-					<h2>${element.title}</h2>
-					<div>${element.timeframes.weekly.current}</div>
-				</div>
-				
-				<div class="right">
-					<img src="./images/icon-ellipsis.svg" alt="ellipsis">
-					<div>${element.timeframes.weekly.previous}</div>
+				<div id="background-${formatedTitle}" class="background">
+					<span></span>
+					<div class ="left">
+						<h2>${element.title}</h2>
+						<div>${element.timeframes.weekly.current}</div>
+					</div>
+					
+					<div class="right">
+						<img src="./images/icon-ellipsis.svg" alt="ellipsis">
+						<div>${element.timeframes.weekly.previous}</div>
+					</div>
 				</div>
 			</li>`;
 			divUl.innerHTML += divStructure;

@@ -85,6 +85,7 @@ body {
 	.card {
 		background-color: $c-Dark-blue;
 		width: 90%;
+		max-width: 325px;
 		margin: auto;
 		list-style: none;
 		position: relative;
@@ -93,62 +94,61 @@ body {
 		margin-top: 50px;
 	
 		.left, .right {
-			border-radius: 15px;
 			position: relative;
-			z-index: 5;
+			background-color: $c-Dark-blue;
+		}
+
+		.left {
+			border-radius: 15px 15px 0 0 ;
+		}
+
+		.right {			
+			border-radius: 0 0 15px 15px ;
 		}
 		
 		.background {
-			position: relative;
+			border-radius: 15px;
+			height: fit-content;
 			overflow: hidden;
-			width: 100%;
-			border-radius: 15px 15px 0 0;
-			display: flex;
-			justify-content: end;
-			height: 30px;
-			z-index: 0;
-			
-			img {
-				position: absolute;
-				top: -10px;
-				margin-right: 15px;
-				width: 50px;
-				height: fit-content;
+			background-repeat: no-repeat;
+			background-position: 90% -10px;
+
+			span {
+				display: block;
+				height: 40px;
+				width: 100%;
 			}
 		}
 	
-// $c-Light-red-work: hsl(15, 100%, 70%); // work
-// $c-Soft-blue: hsl(195, 74%, 62%); // play
-// $c-Light-red-study: hsl(348, 100%, 68%); // study
-// $c-Lime-green: hsl(145, 58%, 55%); // exercise
-// $c-Violet: hsl(264, 64%, 52%); // social
-// $c-Soft-orange: hsl(43, 84%, 65%); // self care
-	
 		#background-work {
 			background-color: $c-Light-red-work;
+			background-image: url(../images/icon-work.svg);
 		}
 
 		#background-play {
 			background-color: $c-Soft-blue;
+			background-image: url(../images/icon-play.svg);
 		}
 
 		#background-study {
 			background-color: $c-Light-red-study;
+			background-image: url(../images/icon-study.svg);
 		}
 	
 		#background-exercise {
-				background-color: $c-Lime-green;
-				img {
-					top: 0;
-				}
+			background-color: $c-Lime-green;
+			background-image: url(../images/icon-exercise.svg);
+			background-position: 90% 0;
 			}
 		}
 
 		#background-social {
 			background-color: $c-Violet;
+			background-image: url(../images/icon-social.svg);
 		}
 
 		#background-self-care {
 			background-color: $c-Soft-orange;
+			background-image: url(../images/icon-self-care.svg);
 		}
 	}
