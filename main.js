@@ -12,8 +12,14 @@ weeklyBtn.addEventListener("click", () => setValues(weeklyBtn.id))
 async function setValues(timeframe) {
 	const response = await fetch("./data.json");
 	const times = await response.json();
-	console.log();
-	const divUl = document.querySelector("body > main > ul")
+	const divUl = document.querySelector("body > main > ul");
+	const previousWhat = {
+		daily: "day", 
+		weekly: "week" , 
+		monthly: "month"
+	};
+
+
 	divUl.innerHTML = ''
 	times.forEach(element => {
 		if (timeframe) {
@@ -22,14 +28,16 @@ async function setValues(timeframe) {
 			<li class="card" id="${formatedTitle}">
 				<div class="background" id="background-${formatedTitle}" >
 					<span></span>
-					<div class ="left">
-						<h2>${element.title}</h2>
-						<div>${element.timeframes[timeframe].current}</div>
-					</div>
-					
-					<div class="right">
-						<img src="./images/icon-ellipsis.svg" alt="ellipsis">
-						<div>${element.timeframes[timeframe].previous}</div>
+					<div class="wrapper">
+						<div class ="left">
+							<h2>${element.title}</h2>
+							<div>${element.timeframes[timeframe].current}</div>
+						</div>
+						
+						<div class="right">
+							<img src="./images/icon-ellipsis.svg" alt="ellipsis">
+							<div>${previousWhat[timeframe] == 'day' ? "yesterday" : `Last ${previousWhat[timeframe]}` } - ${element.timeframes[timeframe].previous}hrs</div>
+						</div>
 					</div>
 				</div>
 			</li>`;
@@ -40,14 +48,16 @@ async function setValues(timeframe) {
 			<li class="card" id="${formatedTitle}">
 				<div id="background-${formatedTitle}" class="background">
 					<span></span>
-					<div class ="left">
-						<h2>${element.title}</h2>
-						<div>${element.timeframes.weekly.current}</div>
-					</div>
-					
-					<div class="right">
-						<img src="./images/icon-ellipsis.svg" alt="ellipsis">
-						<div>${element.timeframes.weekly.previous}</div>
+					<div class="wrapper">
+						<div class ="left">
+							<h2>${element.title}</h2>
+							<div>${element.timeframes.weekly.current}hrs</div>
+						</div>
+						
+						<div class="right">
+							<img src="./images/icon-ellipsis.svg" alt="ellipsis">
+							<div>Last month - ${element.timeframes.weekly.previous}hrs</div>
+						</div>
 					</div>
 				</div>
 			</li>`;

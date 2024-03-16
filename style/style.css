@@ -14,6 +14,7 @@ body header {
   margin: auto;
   margin-top: 80px;
   border-radius: 15px;
+  max-width: 325px;
 }
 body header .report {
   display: flex;
@@ -66,15 +67,41 @@ body .card {
   z-index: 1;
   margin-top: 50px;
 }
-body .card .left, body .card .right {
-  position: relative;
+body .card .wrapper {
   background-color: #1c1f4a;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 15px 15px 0 0;
+  color: white;
 }
 body .card .left {
-  border-radius: 15px 15px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .card .left h2 {
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+body .card .left div {
+  font-size: 32px;
+  font-weight: 200;
 }
 body .card .right {
-  border-radius: 0 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+}
+body .card .right img {
+  width: 24px;
+}
+body .card .right div {
+  color: #6f76c8;
+  font-size: 14px;
+  text-transform: capitalize;
 }
 body .card .background {
   border-radius: 15px;
@@ -112,6 +139,27 @@ body #background-social {
 body #background-self-care {
   background-color: #f1c65b;
   background-image: url(../images/icon-self-care.svg);
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body header {
+    width: 30%;
+  }
+  body header .report {
+    flex-direction: column;
+    height: 300px;
+  }
+  body header .report img {
+    width: 64px;
+    height: auto;
+  }
+  body main {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
