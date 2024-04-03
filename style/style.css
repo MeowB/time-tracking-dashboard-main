@@ -142,23 +142,34 @@ body #background-self-care {
 }
 
 @media only screen and (min-width: 800px) {
-  body {
-    display: flex;
-    flex-wrap: wrap;
-  }
   body header {
-    width: 30%;
+    width: 40%;
   }
   body header .report {
     flex-direction: column;
-    height: 300px;
   }
   body header .report img {
     width: 64px;
     height: auto;
+    margin: 20px 0 30px 30px;
+  }
+  body header .report .text-content {
+    margin-left: 30px;
+  }
+  body header .report .text-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 80px;
+  }
+  body header .buttons {
+    flex-direction: column;
+  }
+  body header .buttons button {
+    margin-left: 30px;
+    text-align: left;
   }
   body main {
-    width: 70%;
+    width: 60%;
   }
 }
 
