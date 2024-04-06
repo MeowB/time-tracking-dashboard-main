@@ -31,7 +31,7 @@ async function setValues(timeframe) {
 					<div class="wrapper">
 						<div class ="left">
 							<h2>${element.title}</h2>
-							<div>${element.timeframes[timeframe].current}</div>
+							<div>${element.timeframes[timeframe].current}hrs</div>
 						</div>
 						
 						<div class="right">

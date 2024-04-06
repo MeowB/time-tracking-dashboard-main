@@ -189,11 +189,13 @@ body {
 
 @media only screen and(min-width: 800px) {
 	body{
-
+		display: flex;
+		
 		header {
-			width: 40%;
+			margin-right: 40px;
 			.report {
 				flex-direction: column;
+				height: 400px;
 				img {
 					width: 64px;
 					height: auto;
@@ -223,6 +225,53 @@ body {
 		}
 		main {
 			width: 60%;
+			height: 100%;
+			margin-top: 80px;
+			margin-right: 80px;
+
+			ul {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				height: 635px;
+
+				.card {
+					width: 30%;
+					margin: 0;
+					margin-bottom: 40px;
+					margin-right: auto;
+				}
+				
+				.background {
+					height: 225px;
+				}
+
+				.wrapper {
+					flex-direction: column;
+					align-items: start;
+					height: 200px;
+
+					.left {
+						div {
+							font-size: 60px;
+							margin-top: 20px;
+							margin-bottom: 20px;
+						}
+					}
+
+					img {
+						position: absolute;
+						top: -260px;
+						right: 30px;
+					}
+				}
+			}
+		}
+
+		.attribution {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
 		}
 	}
 }

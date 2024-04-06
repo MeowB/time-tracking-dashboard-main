@@ -142,11 +142,15 @@ body #background-self-care {
 }
 
 @media only screen and (min-width: 800px) {
+  body {
+    display: flex;
+  }
   body header {
-    width: 40%;
+    margin-right: 40px;
   }
   body header .report {
     flex-direction: column;
+    height: 400px;
   }
   body header .report img {
     width: 64px;
@@ -170,6 +174,44 @@ body #background-self-care {
   }
   body main {
     width: 60%;
+    height: 100%;
+    margin-top: 80px;
+    margin-right: 80px;
+  }
+  body main ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 635px;
+  }
+  body main ul .card {
+    width: 30%;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-right: auto;
+  }
+  body main ul .background {
+    height: 225px;
+  }
+  body main ul .wrapper {
+    flex-direction: column;
+    align-items: start;
+    height: 200px;
+  }
+  body main ul .wrapper .left div {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body main ul .wrapper img {
+    position: absolute;
+    top: -260px;
+    right: 30px;
+  }
+  body .attribution {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 
